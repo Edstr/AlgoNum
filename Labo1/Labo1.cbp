@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -20,7 +21,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/codage17bits.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/codage17bits.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />
