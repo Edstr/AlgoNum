@@ -15,3 +15,19 @@
 	<iostream>
 	<bitset>
 
+1394363209 source:c:\users\eddy\documents\github\algonum\labo1 - strambini\main.cpp
+	<iostream>
+	<limits>
+	"codage17bits.h"
+
+1394376846 c:\users\eddy\documents\github\algonum\labo1 - strambini\include\codage17bits.h
+	<cmath>
+	<iostream>
+	<bitset>
+
+1394405215 source:c:\users\eddy\documents\github\algonum\labo1 - strambini\src\codage17bits.cpp
+	"codage17bits.h"
+	<cmath>
+	<iostream>
+	<bitset>
+

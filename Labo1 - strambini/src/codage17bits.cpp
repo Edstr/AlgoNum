@@ -24,37 +24,42 @@ codage17bits::codage17bits(float nombre)
         multipleDivision = 2; // Si plus grand que 0.5 on va le multiplier par 2 pour être entre 0.5 et 1
     }
 
-    while(nombre <= 0.5 || nombre >= 1.0)
+    while(nombre < 0.5 || nombre > 1.0)
     {
-        nombre = nombre*multipleDivision;
+        nombre *= multipleDivision;
         puissanceDeux++;
-    }
+    } // On rend le nombre entre 0.5 et 1
 
     // Set de l'exposant :
-    float exposant = this->d + puissanceDeux;
+    float exposant = this->d + puissanceDeux; // L'exposant est décalé
     std::bitset<E> bitsetExp(exposant); // Création d'un bitset temporaire contenant la valeur binaire du nombre de puissance de 2 décalé par "d"
 
-    for(int i=0; i < puissanceDeux; i++)
+    for(int i=0; i < E; i++)
     {
-        this->bitSetNombre.set(TAILLE-6+i,bitsetExp[i]);
+        this->bitSetNombre.set(TAILLE - 6 + i,bitsetExp[i]);
         // Remplissage du bitset des bits de l'exposant, on commence au bit n° 11 jusqu'au 16
     }
 
     delete &bitsetExp;
 
     // Set de la mantisse :
-    float mantisse = nombre * pow(2,this-> m + 1);
-    std::bitset<TAILLE - E - 1> bitsetDeca(mantisse);
+    float mantisse = nombre * pow(2,this-> m); // Calcul de la mantisse (petit m) selon la formule
 
-    for(int i=0; i < this->m; i++)
+    std::bitset<TAILLE - E - 1> bitsetDeca(mantisse);
+    // Création d'un bitset temporaire contenant la valeur binaire de la mantisse
+
+
+    for(int i=0; i < 11; i++)
     {
-        this->bitSetNombre.set(i,bitsetDeca[i]);
+        this->bitSetNombre.set(i,bitsetDeca[i]); // On rempli les premiers bits du bitSet avec les bits de la mantisse
     }
 
     delete &bitsetDeca;
 
     std::cout << "Nombre code : " << this->bitSetNombre << "\n";
-    std::cout << "Nombre re-calcule : " << this->S * (mantisse/pow(2,12)) * (pow(2,exposant - this->d)) << "\n";
+
+    float nombreReCalcule = this->S * nombre * (pow(2,exposant - this->d)); // Selon la formule du cours
+    std::cout << "Nombre re-calcule : " << nombreReCalcule << "\n";
 }
 
 float codage17bits::controleSigne(float nombre)
