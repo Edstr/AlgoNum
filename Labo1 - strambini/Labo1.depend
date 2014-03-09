@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1394363209 source:c:\users\eddy\documents\github\algonum\labo1\main.cpp
+	<iostream>
+	<limits>
+	"codage17bits.h"
+
+1394378987 source:c:\users\eddy\documents\github\algonum\labo1\src\codage17bits.cpp
+	"codage17bits.h"
+	<cmath>
+	<iostream>
+	<bitset>
+
+1394376846 c:\users\eddy\documents\github\algonum\labo1\include\codage17bits.h
+	<cmath>
+	<iostream>
+	<bitset>
+

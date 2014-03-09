@@ -5,12 +5,13 @@
 
 #include <iostream>
 #include <limits>
+#include "codage17bits.h""
 
 using namespace std;
 
-double saisie(string texte)
+float saisie(string texte)
 {
-    double nombre;
+    float nombre;
 
     cout << texte;
 
@@ -27,10 +28,11 @@ double saisie(string texte)
 
 int main()
 {
-    double nmb1, nmb2;
+    float nombreSaisie;
 
-    nmb1 = saisie("Premier nombre : ");
-    nmb2 = saisie("Deuxieme nombre : ");
+    nombreSaisie = saisie("Saisir le nombre a coder : ");
+
+    codage17bits nombreCode = codage17bits(nombreSaisie);
 
     return 0;
 }
