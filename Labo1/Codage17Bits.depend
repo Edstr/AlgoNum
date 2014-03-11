@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1394416514 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/Labo1Perso/Codage17Bits.cpp
+	"Codage17Bits.h"
+
+1394415388 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/Labo1Perso/Codage17Bits.h
+	<iostream>
+	<string>
+	<sstream>
+	<bitset>
+	<cmath>
+
+1394416102 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/Labo1Perso/main.cpp
+	"Codage17Bits.h"
+	<iostream>
+
