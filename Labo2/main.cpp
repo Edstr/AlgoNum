@@ -242,7 +242,7 @@ int main(int argc, char **argv)
 	cout << endl;
     cout << "Fonctions:" << endl;
     cout << "----------" << endl;
-    cout << "1) sin(x)+x/3)" << endl;
+    cout << "1) sin(x)+(x/3)" << endl;
     cout << "2) x/(1-x^2)" << endl;
     cout << "0) Quitter" << endl;
     cout << endl;
