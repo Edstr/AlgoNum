@@ -58,6 +58,9 @@ class GeomGlut
 
     void setWinPixels( unsigned int x, unsigned int y ) { winPixels.x = x; winPixels.y = y; }
 
+    float getScale() { return m_scale; }
+    void setScale( float scale ) { m_scale = scale; }
+
     unsigned int xWinFunc( void ) { return( winFuncPixels.x ); }
     unsigned int yWinFunc( void ) { return( winFuncPixels.y ); }
 
@@ -67,6 +70,7 @@ class GeomGlut
     coord2D maxWin;
     coord2D_UInt winFuncPixels;
     coord2D_UInt winPixels;
+    float m_scale;
 
     //--- Private methods ---
     coord2D getMinWin( void ) { return( minWin ); }
@@ -81,6 +85,7 @@ class GeomGlut
 // openGL functions
 void Display();
 void Reshape(int, int);
+void Scale(int, int, int, int);
 
 #endif // GeomGlut_H
 

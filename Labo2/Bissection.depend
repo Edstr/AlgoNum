@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1331803852 source:c:\users\cyril.leuba\dropbox\math numÈrique\labo2\src\geomglut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1331803852 
+
+1331802398 c:\users\cyril.leuba\dropbox\math numÈrique\labo2\src\geomglut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1331639580 >
+
+1331825385 c:\users\cyril.leuba\dropbox\math numÈrique\labo2\src\main.h
+	"norootfoundexception.h"
+
+1332078895 ndexception.h"
+
+1331639580 c:\users\cyril.leuba\dropbox\math numÈrique\labo2\src\norootfoundexception.h
+	<iostream>
+	<stdexcept>
+
+1332078895 source:c:\users\cyril.leuba\dropbox\math numÈrique\labo2\src\main.cpp
+	<iostream>
+	<cmath>
+	<stdlib.h>
+	<time.h>
+	"main.h"
+	"GeomGlut.h"
+	"norootfoundexception.h"
+
+1363962797 source:/home/cyriaque/Cours/Algorithme/Num√©rique/Labo2/labo2_equipe4_Chavaillaz_Leuba_Herrmann/Src/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1363963230 /home/cyriaque/Cours/Algorithme/Num√©rique/Labo2/labo2_equipe4_Chavaillaz_Leuba_Herrmann/Src/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<cmath>
+
+1364145386 /home/cyriaque/Cours/Algorithme/Num√©rique/Labo2/labo2_equipe4_Chavaillaz_Leuba_Herrmann/Src/main.h
+	<iostream>
+	<limits>
+	<cmath>
+	<time.h>
+
+1331639580 /home/cyriaque/Cours/Algorithme/Num√©rique/Labo2/labo2_equipe4_Chavaillaz_Leuba_Herrmann/Src/norootfoundexception.h
+	<iostream>
+	<stdexcept>
+
+1364146942 source:/home/cyriaque/Cours/Algorithme/Num√©rique/Labo2/labo2_equipe4_Chavaillaz_Leuba_Herrmann/Src/main.cpp
+	"main.h"
+	"GeomGlut.h"
+
+1395625450 source:/home/cyriaque/Cours/Algorithme/Num√©rique/2014/AlgoNum/cyriaque/Labo2/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1395628323 /home/cyriaque/Cours/Algorithme/Num√©rique/2014/AlgoNum/cyriaque/Labo2/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<cmath>
+
+1395627591 /home/cyriaque/Cours/Algorithme/Num√©rique/2014/AlgoNum/cyriaque/Labo2/main.h
+	<iostream>
+	<limits>
+	<cmath>
+	<time.h>
+
+1395630805 source:/home/cyriaque/Cours/Algorithme/Num√©rique/2014/AlgoNum/cyriaque/Labo2/main.cpp
+	"main.h"
+	"GeomGlut.h"
+

@@ -14,7 +14,7 @@ GeomGlut graphWin;
 
 GeomGlut::GeomGlut( void )
 {
-
+  m_scale = 1.0f;
 }
 
 GeomGlut::~GeomGlut( void )
@@ -60,6 +60,8 @@ void GeomGlut::initGraphicsWin( unsigned int pixelWinX, double xMin, double xMax
   // Initialiser la couleur du fond (blanc)
   glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
 
+  glutMouseFunc( Scale );
+
   glutReshapeFunc( Reshape );
   glutDisplayFunc( Display );
   glutMainLoop();
@@ -96,7 +98,8 @@ void GeomGlut::drawAxes()
     glVertex3d(-ARROW, 1.0-ARROW, 0.0);
 
     glColor3f(0.0f, 0.0f, 1.0f); // blue
-    // Axe X
+    // Axe X  maxWin.x = xMax;
+
     glVertex3d(1.0, 0.0, 0.0);
     glVertex3d(maxWin.x, 0.0, 0.0);
     glVertex3d(0.0, 0.0, 0.0);
@@ -174,14 +177,35 @@ void Reshape(int w, int h)
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
 
-  float xRatio = (float)w/(float)graphWin.xWinFunc();
-  float yRatio = (float)h/(float)graphWin.yWinFunc();
+  float xRatio = (float)w*graphWin.getScale()/(float)graphWin.xWinFunc();
+  float yRatio = (float)h*graphWin.getScale()/(float)graphWin.yWinFunc();
 
   // Volume de clipping : (left, right, bottom, top, near, far)
   glOrtho(graphWin.xMin()*xRatio, graphWin.xMax()*xRatio, graphWin.yMin()*yRatio, graphWin.yMax()*yRatio, -2.0f, 2.0f);
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
+}
+
+void Scale(int button, int state, int x, int y)
+{
+	float value;
+
+	switch(button)
+	{
+	case 3: value = 0.9f; break;
+	case 4: value = 1.1f; break;
+	}
+
+	if (graphWin.getScale() * value < 0.01f)
+		return;
+
+	if (graphWin.getScale() * value > 5.0f)
+		return;
+
+	graphWin.setScale(graphWin.getScale() * value);
+	Reshape(graphWin.xWinFunc(), graphWin.yWinFunc());
+	Display();
 }
 
 //----------------------------------------------------------------------------------
