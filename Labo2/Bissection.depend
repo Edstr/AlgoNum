@@ -54,3 +54,45 @@
 	"main.h"
 	"GeomGlut.h"
 
+1395625450 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo2/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1395628323 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo2/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<cmath>
+
+1395627591 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo2/main.h
+	<iostream>
+	<limits>
+	<cmath>
+	<time.h>
+
+1395630805 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo2/main.cpp
+	"main.h"
+	"GeomGlut.h"
+
+1395655819 source:c:\users\eddy\desktop\labo2\geomglut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1395657575 c:\users\eddy\desktop\labo2\geomglut.h
+	<windows.h>
+	<GLUT/GLUT.h>
+	<windows.h>
+	<GL/glut.h>
+
+1395657532 c:\users\eddy\desktop\labo2\main.h
+	<iostream>
+	<sstream>
+	<limits>
+	<cmath>
+	<time.h>
+
+1395657695 source:c:\users\eddy\desktop\labo2\main.cpp
+	"main.h"
+	"GeomGlut.h"
+

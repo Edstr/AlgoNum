@@ -1,7 +1,17 @@
+/*
+ * Recherche des y = 0 à l'aide de la méthode de la bissection.
+ *
+ * Auteurs:
+ *	Fábio Marques
+ *	Cyriaque Skrapits
+ *	Eddy Strambini
+ */
+
 #ifndef GEOMETRIE_H
 #define GEOMETRIE_H
 
 #include <iostream>
+#include <sstream>
 #include <limits>
 #include <cmath>
 #include <time.h>

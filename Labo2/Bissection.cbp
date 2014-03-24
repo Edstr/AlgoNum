@@ -33,10 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Linker>
-			<Add library="glut" />
-			<Add library="GL" />
-			<Add library="GLU" />
-			<Add library="Xxf86vm" />
+			<Add library="glut32" />
+			<Add library="glu32" />
+			<Add library="opengl32" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
 		</Linker>
 		<Unit filename="GeomGlut.cpp" />
 		<Unit filename="GeomGlut.h" />
