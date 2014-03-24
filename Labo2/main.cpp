@@ -116,6 +116,7 @@ void dessinerUnites()
  */
 double bissection(float borneInf, float borneSup, float pas, double (*f)(double))
 {
+	float hauteurSegment = 3.0;
 	float a = borneInf;
 	float b = borneSup;
     float fa = f(a);
@@ -127,7 +128,7 @@ double bissection(float borneInf, float borneSup, float pas, double (*f)(double)
 	// que l'epsilon.
     while(abs(mnew - mold) > epsilon)
 	{
-		dessinerIntervales(a, b, 3.0f);
+		dessinerIntervales(a, b, hauteurSegment);
 
 		mold = mnew;
 		mnew = (a + b) / 2;
