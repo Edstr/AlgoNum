@@ -16,7 +16,6 @@ extern GeomGlut graphWin;
  * rappelle main.h après, ces fonctions vont être définies deux fois ce qui
  * produit un bug.
  */
-const float EPSILON_MINIMUM = 0.0001;
 const float LIMITE_X = 100;
 const float LIMITE_Y = 60;
 const float INTROUVABLE = LIMITE_X + 1;
@@ -237,6 +236,8 @@ int main(int argc, char **argv)
     cout << "Laboratoire 2" << endl;
     cout << endl;
     cout << "Fábio Marques, Cyriaque Skrapits, Eddy Strambini" << endl;
+    cout << endl;
+    cout << "NOTE : utilisez les clics pour zoomer (Windows) ou la roulette (Linux)." << endl;
 	cout << "================================================================================" << endl;
 	cout << endl;
     cout << "Fonctions:" << endl;
@@ -256,7 +257,9 @@ int main(int argc, char **argv)
     setBorne(borneSuperieure, borneInferieure, LIMITE_X, "Borne superieure : ");
 
     // Saisie de l'epsilon.
-    saisie(epsilon, "Epsilon : ");
+    std::ostringstream titre;
+	titre << "Epsilon (machine : " << std::numeric_limits<float>::epsilon() << ") : ";
+    saisie(epsilon, titre.str());
 
 	// Calcul la racine.
 	racine = bissection(borneInferieure, borneSuperieure, epsilon, (choix == 1 ? &f1 : &f2));

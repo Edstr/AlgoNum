@@ -3,11 +3,12 @@
 #ifndef GeomGlut_H
 #define GeomGlut_H
 
+#ifdef defined(_WIN32) || defined(_WIN64)
+#include <windows.h>
+#endif
+
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
-#elifdef defined(_WIN32) || defined(_WIN64)
-#include <windows.h>
-#include <GL/glut.h>
 #else
 #include <GL/glut.h>                // Librairie GLUT
 #endif
