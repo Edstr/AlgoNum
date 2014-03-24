@@ -9,6 +9,10 @@
 #include <GL/glut.h>                // Librairie GLUT
 #endif
 
+#ifdef WIN32
+#include <windows.h>
+#endif // WIN32
+
 #include <cmath>
 
 using namespace std;

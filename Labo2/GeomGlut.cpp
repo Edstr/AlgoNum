@@ -193,8 +193,13 @@ void Scale(int button, int state, int x, int y)
 
 	switch(button)
 	{
+#ifdef WIN32
+	case 0: value = 0.9f; break;
+	case 2: value = 1.1f; break;
+#else
 	case 3: value = 0.9f; break;
 	case 4: value = 1.1f; break;
+#endif
 	}
 
 	if (graphWin.getScale() * value < 0.01f)
