@@ -1,0 +1,247 @@
+# depslib dependency file v1.0
+1397734319 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/CVS.cpp
+	"CVS.h"
+
+1397734189 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/CVS.h
+	<iostream>
+	<sstream>
+	<fstream>
+	<map>
+	<string>
+
+1397830425 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1337795460 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1366063845 /usr/include/GL/glut.h
+	"freeglut_std.h"
+
+1366063845 /usr/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1397397208 /usr/include/GL/gl.h
+	"gl_mangle.h"
+	<windows.h>
+	<GL/glext.h>
+
+1397397208 /usr/include/GL/gl_mangle.h
+
+1397397208 /usr/include/GL/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1393559540 /usr/include/inttypes.h
+	<features.h>
+	<stdint.h>
+	<stddef.h>
+
+1393559535 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1393559535 /usr/include/stdc-predef.h
+
+1393559543 /usr/include/sys/cdefs.h
+	<features.h>
+	<bits/wordsize.h>
+
+1393559540 /usr/include/bits/wordsize.h
+
+1393559535 /usr/include/gnu/stubs.h
+	<gnu/stubs-32.h>
+	<gnu/stubs-64.h>
+	<gnu/stubs-x32.h>
+
+1393627339 /usr/include/gnu/stubs-32.h
+
+1393559585 /usr/include/gnu/stubs-64.h
+
+1393559540 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1393559541 /usr/include/bits/wchar.h
+
+1361895477 /usr/include/GL/glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1361895477 /usr/include/GL/glu_mangle.h
+
+1393559540 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1393559542 /usr/include/bits/waitflags.h
+
+1393559542 /usr/include/bits/waitstatus.h
+	<endian.h>
+
+1393559541 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1393559541 /usr/include/bits/endian.h
+
+1393559541 /usr/include/bits/byteswap.h
+	<features.h>
+	<bits/types.h>
+	<bits/wordsize.h>
+	<bits/byteswap-16.h>
+
+1393559542 /usr/include/bits/types.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/typesizes.h>
+
+1393559542 /usr/include/bits/typesizes.h
+
+1393559541 /usr/include/bits/byteswap-16.h
+
+1393559536 /usr/include/xlocale.h
+
+1393559542 /usr/include/sys/types.h
+	<features.h>
+	<bits/types.h>
+	<time.h>
+	<stddef.h>
+	<endian.h>
+	<sys/select.h>
+	<sys/sysmacros.h>
+	<bits/pthreadtypes.h>
+
+1393559541 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1393559541 /usr/include/bits/time.h
+	<bits/types.h>
+	<bits/types.h>
+	<bits/timex.h>
+
+1393559541 /usr/include/bits/timex.h
+	<bits/types.h>
+
+1393559543 /usr/include/sys/select.h
+	<features.h>
+	<bits/types.h>
+	<bits/select.h>
+	<bits/sigset.h>
+	<time.h>
+	<bits/time.h>
+	<bits/select2.h>
+
+1393559543 /usr/include/bits/select.h
+	<bits/wordsize.h>
+
+1393559540 /usr/include/bits/sigset.h
+
+1393559543 /usr/include/bits/select2.h
+
+1393559542 /usr/include/sys/sysmacros.h
+	<features.h>
+
+1393559542 /usr/include/bits/pthreadtypes.h
+	<bits/wordsize.h>
+
+1393559540 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1393559540 /usr/include/bits/stdlib-bsearch.h
+
+1393559540 /usr/include/bits/stdlib-float.h
+
+1393559540 /usr/include/bits/stdlib.h
+
+1393559540 /usr/include/bits/stdlib-ldbl.h
+
+1329385990 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/main.h
+
+1397831123 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/main.cpp
+	<math.h>
+	"main.h"
+	"GeomGlut.h"
+	"CSV.h"
+	<iostream>
+	<string>
+
+1393559539 /usr/include/math.h
+	<features.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+	<bits/math-finite.h>
+
+1393559539 /usr/include/bits/huge_val.h
+	<endian.h>
+
+1393559539 /usr/include/bits/huge_valf.h
+
+1393559539 /usr/include/bits/huge_vall.h
+
+1393559539 /usr/include/bits/inf.h
+
+1393559539 /usr/include/bits/nan.h
+	<endian.h>
+
+1393559539 /usr/include/bits/mathdef.h
+
+1393559539 /usr/include/bits/mathcalls.h
+
+1393559539 /usr/include/bits/mathinline.h
+
+1393559539 /usr/include/bits/math-finite.h
+
+1397826924 source:/home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/CSV.cpp
+	"CSV.h"
+
+1397829109 /home/cyriaque/Cours/Algorithme/Numérique/2014/AlgoNum/cyriaque/Labo4/partie2/or/CSV.h
+	<iostream>
+	<sstream>
+	<fstream>
+	<map>
+	<string>
+
