@@ -47,10 +47,9 @@ void GeomGlut::initGraphicsWin( unsigned int pixelWinX, double xMin, double xMax
     winFuncPixels.x = pixelWinX;
     winFuncPixels.y = (unsigned int)((yMax-yMin) * (double)winFuncPixels.x/(xMax-xMin));
 
-    char *myargv [1];
-    int myargc=1;
-    //myargv[0]= '';
-    glutInit(&myargc, myargv);
+	int argc = 1;
+	char *argv[1] = {(char*)"Glut"};
+	glutInit(&argc, argv);
 
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
     glutInitWindowPosition(0, 0);
