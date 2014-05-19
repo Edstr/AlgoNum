@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1400471605 source:c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\main.cpp
+	"main.h"
+
+1400470853 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\main.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<iostream>
+	<sstream>
+	<limits>
+	<cmath>
+	<iomanip>
+	<windows.h>
+	"GeomGlut.h"
+	"Simpson.h"
+
+1400458645 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\geomglut.h
+	<windows.h>
+	<GLUT/GLUT.h>
+	<windows.h>
+	<GL/glut.h>
+
+1400470560 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\simpson.h
+	<iostream>
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1400471409 source:c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\simpson.cpp
+	<cmath>
+	<iomanip>
+	<omp.h>
+	"Simpson.h"
+	"GeomGlut.h"
+
+1400458588 source:c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\geomglut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
