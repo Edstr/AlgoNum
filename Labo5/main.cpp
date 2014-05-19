@@ -92,7 +92,7 @@ void intro()
     cout << "Professeur : Dr. Stephane Gobron" << endl;
     cout << endl;
     cout << "Note 1 : utilisez les clics pour zoomer sur le graphique." << endl;
-    cout << "Note 2 : un N d'environ 1000 semble être optimal." << endl;
+    cout << "Note 2 : un N d'environ 1000 semble etre optimal." << endl;
     cout << "================================================================================" << endl;
     cout << endl;
 }
