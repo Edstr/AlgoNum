@@ -10,7 +10,7 @@
 #include <cmath>
 #include <iomanip>
 #include <omp.h>
-#include "Simpson.h"
+#include "simpson.h"
 #include "GeomGlut.h"
 
 
@@ -36,7 +36,7 @@ Simpson::Simpson()
  * @param n Distance entre les points.
  * @param f Foncteur sur la fonction à représenter.
  */
-void Simpson::dessinerFonction(const double b1, const double b2, const int n, double (*f)(double))
+void Simpson::dessinerFonction(const double b1, const double b2, const int n, long double (*f)(long double))
 {
     const float PAS = 0.00001;
     float xNew, yNew;
@@ -44,12 +44,14 @@ void Simpson::dessinerFonction(const double b1, const double b2, const int n, do
     float yOld = f(b1);
     float pas = (b2 - b1) / n;
 
+	graphWin.setColorForPlotWithoutColor(0.8f, 0.2f, 0.f);
+
     for(float x = b1; x <= b2; x += PAS)
     {
         xNew = x;
         yNew = f(x);
 
-        graphWin.segmentCouleur(xOld, yOld, xNew, yNew, 0.8f, 0.2f, 0.f); // Fonction en rouge foncé
+        graphWin.segment(xOld, yOld, xNew, yNew); // Fonction en rouge foncé
 
         xOld = xNew;
         yOld = yNew;
@@ -61,20 +63,22 @@ void Simpson::dessinerFonction(const double b1, const double b2, const int n, do
         yNew = f(x);
 
         // Cadran haut droite
-        graphWin.segmentCouleur(xOld, 0, xOld, yOld, 1.f, 0.6f, 0.3f);
-        graphWin.segmentCouleur(xOld, 0, xOld, yOld, 1.f, 0.6f, 0.3f);
+        graphWin.setColorForPlotWithoutColor(1.f, 0.6f, 0.3f);
+        graphWin.segment(xOld, 0, xOld, yOld);
+        graphWin.segment(xOld, 0, xOld, yOld);
 
         // Cadran haut gauche
-        graphWin.segmentCouleur(-xOld, 0, -xOld, yOld, 0.9f, 0.9f, 0.9f);
-        graphWin.segmentCouleur(-xNew, 0, -xNew, yNew, 0.9f, 0.9f, 0.9f);
+        graphWin.setColorForPlotWithoutColor(0.9f, 0.9f, 0.9f);
+        graphWin.segment(-xOld, 0, -xOld, yOld);
+        graphWin.segment(-xNew, 0, -xNew, yNew);
 
         // Cadran bas gauche
-        graphWin.segmentCouleur(-xOld, 0, -xOld, -yOld, 0.9f, 0.9f, 0.9f);
-        graphWin.segmentCouleur(-xNew, 0, -xNew, -yNew, 00.9f, 0.9f, 0.9f);
+        graphWin.segment(-xOld, 0, -xOld, -yOld);
+        graphWin.segment(-xNew, 0, -xNew, -yNew);
 
         // Cadran bas droite
-        graphWin.segmentCouleur(xOld, 0, xOld, -yOld, 0.9f, 0.9f, 0.9f);
-        graphWin.segmentCouleur(xNew, 0, xNew, -yNew, 0.9f, 0.9f, 0.9f);
+        graphWin.segment(xOld, 0, xOld, -yOld);
+        graphWin.segment(xNew, 0, xNew, -yNew);
 
         xOld = xNew;
         yOld = yNew;
@@ -89,20 +93,18 @@ void Simpson::dessinerFonction(const double b1, const double b2, const int n, do
  * @param n Nombre de sous-blocs compris dans les bornes d'intégration.
  * @param double f Foncteur de la fonction à intégrer.
  */
-double Simpson::integration(const double a, const double b, const int n, double (*f)(double))
+long double Simpson::integration(const double a, const double b, const unsigned int n, long double (*f)(long double))
 {
-    const double h = (b - a) / n;
-    double s = f(a) + f(b);
-    double ni = 0, np = 0; // N impairs / pairs
-    int i, j; // Itérateurs
+    const long double h = (b - a) / n;
+    long double s = f(a) + f(b);
+    long double ni = 0, np = 0; // N impairs / pairs
+    unsigned int i, j; // Itérateurs
 
     // Impairs
-    #pragma omp parallel for reduction(+:ni) schedule(static,1)
     for(i = 1; i < n; i += 2)
         ni += f(a + i * h);
 
     // Pairs
-    #pragma omp parallel for reduction(+:np) schedule(static,1)
     for(j = 2; j < n - 1; j += 2)
         np += f(a + j * h);
 

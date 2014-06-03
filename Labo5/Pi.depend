@@ -2,6 +2,8 @@
 1400471605 source:c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\main.cpp
 	"main.h"
 
+1400458588 
+
 1400470853 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\main.h
 	<GLUT/GLUT.h>
 	<GL/glut.h>
@@ -14,11 +16,15 @@
 	"GeomGlut.h"
 	"Simpson.h"
 
+1401804311 "
+
 1400458645 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\geomglut.h
 	<windows.h>
 	<GLUT/GLUT.h>
 	<windows.h>
 	<GL/glut.h>
+
+1401804113 >
 
 1400470560 c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\simpson.h
 	<iostream>
@@ -32,8 +38,122 @@
 	"Simpson.h"
 	"GeomGlut.h"
 
+1401804115 h"
+
 1400458588 source:c:\users\cyriaque.skrapits\desktop\eddy\algonum\labo5\geomglut.cpp
 	"GeomGlut.h"
 	"main.h"
 	<iostream>
+
+1401826922 source:c:\users\cyriaque.skrapits\desktop\algonum\labo5\geomglut.cpp
+	"GeomGlut.h"
+	"main.h"
+
+1401826937 c:\users\cyriaque.skrapits\desktop\algonum\labo5\geomglut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<iostream>
+
+1401827209 c:\users\cyriaque.skrapits\desktop\algonum\labo5\main.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<iostream>
+	<sstream>
+	<limits>
+	<cmath>
+	<iomanip>
+	<windows.h>
+	"GeomGlut.h"
+	"simpson.h"
+
+1401804113 c:\users\cyriaque.skrapits\desktop\algonum\labo5\simpson.h
+	<iostream>
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1401827152 source:c:\users\cyriaque.skrapits\desktop\algonum\labo5\main.cpp
+	"main.h"
+
+1401822262 source:c:\users\cyriaque.skrapits\desktop\algonum\labo5\simpson.cpp
+	<cmath>
+	<iomanip>
+	<omp.h>
+	"simpson.h"
+	"GeomGlut.h"
+
+1401821818 source:/run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1401821935 /run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1401822126 /run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/main.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<iostream>
+	<sstream>
+	<limits>
+	<cmath>
+	<iomanip>
+	"GeomGlut.h"
+	"simpson.h"
+
+1401822158 source:/run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/main.cpp
+	"main.h"
+
+1401822262 source:/run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/simpson.cpp
+	<cmath>
+	<iomanip>
+	<omp.h>
+	"simpson.h"
+	"GeomGlut.h"
+
+1401804113 /run/media/cyriaque/C292EB1292EB09AD/Users/cyriaque.skrapits/Desktop/AlgoNum/Labo5/simpson.h
+	<iostream>
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1401821818 source:/home/cyriaque/Labo5/GeomGlut.cpp
+	"GeomGlut.h"
+	"main.h"
+	<iostream>
+
+1401821935 /home/cyriaque/Labo5/GeomGlut.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1401822126 /home/cyriaque/Labo5/main.h
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+	<iostream>
+	<sstream>
+	<limits>
+	<cmath>
+	<iomanip>
+	"GeomGlut.h"
+	"simpson.h"
+
+1401804113 /home/cyriaque/Labo5/simpson.h
+	<iostream>
+	<GLUT/GLUT.h>
+	<GL/glut.h>
+
+1401822158 source:/home/cyriaque/Labo5/main.cpp
+	"main.h"
+
+1401822262 source:/home/cyriaque/Labo5/simpson.cpp
+	<cmath>
+	<iomanip>
+	<omp.h>
+	"simpson.h"
+	"GeomGlut.h"
 

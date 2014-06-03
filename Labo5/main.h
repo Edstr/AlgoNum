@@ -24,7 +24,7 @@
 #include <windows.h>
 
 #include "GeomGlut.h"
-#include "Simpson.h"
+#include "simpson.h"
 
 using namespace std;
 
@@ -33,10 +33,13 @@ const double X_MIN = -2.1;
 const double Y_MIN = -2.1;
 const double X_MAX = 2.1;
 const double Y_MAX = 2.1;
-const double PI = 3.14159265358979323846;
-const int FONT = (int)GLUT_BITMAP_8_BY_13;
+const long double PI = 3.1415926535897932384626433832795L;
 
 // Fonction main
+void intro();
+void resultats();
+void saisieDecoupage();
+template<class T> inline void saisie(T& t, string texte);
 void mainFunction(void);
 
 #endif

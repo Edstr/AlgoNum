@@ -17,13 +17,26 @@ extern GeomGlut graphWin;
 int n = 0; //Précision du calcul (nombre de découpage)
 Simpson simpson;
 
+
+int main()
+{
+    intro();
+    saisieDecoupage();
+    resultats();
+
+    graphWin.initGraphicsWin(700, X_MIN, X_MAX, Y_MIN, Y_MAX );
+
+    return 0;
+}
+
+
 /**
  * Fonction d'approximation de Pi.
  *
  * @param x Valeur réelle entre 0 et 1.
  * @return Approximation de Pi / 4.
  */
-inline double f(const double x)
+inline long double f(const long double x)
 {
     return 1 / (1 + pow(x, 2));
 }
@@ -51,34 +64,35 @@ template<class T> inline void saisie(T &t, string texte)
  */
 void mainFunction(void)
 {
-
     simpson.dessinerFonction(0, 1, n, &f);
 
     // Axes principaux
-    graphWin.segmentCouleur(X_MIN, 0, X_MAX, 0, 0.2f, 0.4f, 0.6f);
-    graphWin.segmentCouleur(0, Y_MAX, 0, Y_MIN, 0.2f, 0.4f, 0.6f);
+    graphWin.setColorForPlotWithoutColor(0.2f, 0.4f, 0.6f);
+    graphWin.segment(X_MIN, 0, X_MAX, 0);
+    graphWin.segment(0, Y_MAX, 0, Y_MIN);
 
     // Axes unitaires
-    graphWin.segmentCouleur(1, Y_MAX, 1, Y_MIN, 0.8f, 0.9f, 1.f);
-    graphWin.segmentCouleur(-1, Y_MAX, -1, Y_MIN, 0.8f, 0.9f, 1.f);
-    graphWin.segmentCouleur(X_MIN, 1, X_MAX, 1, 0.8f, 0.9f, 1.f);
-    graphWin.segmentCouleur(X_MIN, -1, X_MAX, -1, 0.8f, 0.9f, 1.f);
+    graphWin.setColorForPlotWithoutColor(0.8f, 0.9f, 1.f);
+    graphWin.segment(1, Y_MAX, 1, Y_MIN);
+    graphWin.segment(-1, Y_MAX, -1, Y_MIN);
+    graphWin.segment(X_MIN, 1, X_MAX, 1);
+    graphWin.segment(X_MIN, -1, X_MAX, -1);
 
     // Unités
-    graphWin.setCouleur(0.2f, 0.2f, 0.2f);
-    graphWin.texte(0.05f, 0.05f,(void *)FONT, "0");
-    graphWin.texte(1.05f, 0.05f,(void *)FONT, "1");
-    graphWin.texte(0.05f, 1.05f,(void *)FONT, "1");
-    graphWin.texte(0.05f, -1.1f,(void *)FONT, "-1");
-    graphWin.texte(-1.1f, 0.05f,(void *)FONT, "-1");
+    graphWin.setColorForPlotWithoutColor(0.2f, 0.2f, 0.2f);
+    graphWin.texte(0.05f, 0.05f, "0");
+    graphWin.texte(1.05f, 0.05f, "1");
+    graphWin.texte(0.05f, 1.05f, "1");
+    graphWin.texte(0.05f, -1.1f, "-1");
+    graphWin.texte(-1.1f, 0.05f, "-1");
 
     // Titre (positionnement approximatif)
     float scale = graphWin.getScale();
-    graphWin.setCouleur(0.2f, 0.4f, 0.6f);
-    graphWin.texte(scale * 0.f, 1.23f,(void *)FONT, "Integrale de 0 a 1 de f(x) =");
-    graphWin.texte(scale * 1.55f, 1.3f,(void *)FONT, "1");
-    graphWin.texte(scale * 1.4f, 1.15f,(void *)FONT, "1 + x^2");
-    graphWin.segment(scale * 1.4f, 1.25f, scale * 1.75f, 1.25f);
+    graphWin.setColorForPlotWithoutColor(0.2f, 0.4f, 0.6f);
+    graphWin.texte(scale * 0.2f, 1.23f, "Integrale de 0 a 1 de f(x) =");
+    graphWin.texte(scale * 1.15f, 1.3f, "1");
+    graphWin.texte(scale * 1.05f, 1.15f, "1 + x^2");
+    graphWin.segment(scale * 1.0f, 1.25f, scale * 1.35f, 1.25f);
 }
 
 void intro()
@@ -92,7 +106,7 @@ void intro()
     cout << "Professeur : Dr. Stephane Gobron" << endl;
     cout << endl;
     cout << "Note 1 : utilisez les clics pour zoomer sur le graphique." << endl;
-    cout << "Note 2 : un N d'environ 1000 semble etre optimal." << endl;
+    cout << "Note 2 : un N d'environ 800 semble etre optimal." << endl;
     cout << "================================================================================" << endl;
     cout << endl;
 }
@@ -124,7 +138,7 @@ void resultats()
     QueryPerformanceFrequency(&Frequency);
     QueryPerformanceCounter(&StartingTime); // Temps de départ
 
-    double pi = 4 * simpson.integration(0, 1, n, &f);
+    long double pi = 4 * Simpson::integration(0, 1, n, &f);
 
     QueryPerformanceCounter(&EndingTime); // Temps de fin
     ElapsedMicroseconds.QuadPart = EndingTime.QuadPart - StartingTime.QuadPart;
@@ -139,15 +153,4 @@ void resultats()
     cout << "Valeur reelle de Pi:\n\t" << PI << endl;
     cout << "Erreur comparee a Pi:\n\t" << abs(PI - pi) << endl;
     cout << endl << setprecision(2);
-}
-
-int main()
-{
-    intro();
-    saisieDecoupage();
-    resultats();
-
-    graphWin.initGraphicsWin(700, X_MIN, X_MAX, Y_MIN, Y_MAX );
-
-    return 0;
 }

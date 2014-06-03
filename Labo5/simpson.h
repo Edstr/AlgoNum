@@ -26,8 +26,8 @@ class Simpson
         Simpson();
         virtual ~Simpson();
 
-        double integration(const double, const double, const int, double (*f)(double));
-        void dessinerFonction(const double, const double, const int, double (*f)(double));
+        static long double integration(const double, const double, const unsigned int, long double (*f)(long double));
+        static void dessinerFonction(const double, const double, const int, long double (*f)(long double));
 
     protected:
     private:

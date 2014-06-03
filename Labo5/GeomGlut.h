@@ -3,33 +3,35 @@
 #ifndef GeomGlut_H
 #define GeomGlut_H
 
-#ifdef defined(_WIN32) || defined(_WIN64)
-#include <windows.h>
-#endif
-
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
 #else
-#include <windows.h>
 #include <GL/glut.h>                // Librairie GLUT
 #endif
 
+#include <GL/gl.h>
+#include <GL/glu.h>
+
+
+//include this file for cout
+#include <iostream>
+
 using namespace std;
 
-const GLfloat ARROW = 0.1;
-const GLfloat DEFAUL_SIZE_POINT = 2.0;
+const GLfloat ARROW = 0.2;
+const GLfloat DEFAULT_SIZE_POINT = 2.0;
 
-typedef struct coord2D
+typedef struct
 {
     double x;
     double y;
-};
+} coord2D;
 
-typedef struct coord2D_UInt
+typedef struct
 {
     unsigned int x;
     unsigned int y;
-};
+} coord2D_UInt;
 
 class GeomGlut
 {
@@ -51,12 +53,27 @@ public:
     void plot( GLfloat x, GLfloat y );
     void plot( GLfloat x, GLfloat y, GLfloat sizePoint );
 
+    //--- to find an « good » delta_x
+    double findSmartStepX( void );  // if working in the full defined area (from winMinX to winMaxX)
+    double findSmartStepX( double workingMinX, double workingMaxX );  // if working in a restricted area defined between workingMinX and workingMaxX
+
+    //--- improving plottings ---
+    void plot( GLfloat x, GLfloat y, GLfloat r, GLfloat g, GLfloat b ); // dessine un point de couleur {r,g,b} si dans la zone de travail et de taille DEFAULT_SIZE_POINT
+    void setColorForPlotWithoutColor( GLfloat r, GLfloat g, GLfloat b ); // to assign color, but must use the following function
+    void plot( bool presetColorAndGLVertex, GLfloat x, GLfloat y ); // dessine un point sans changer la couleur ni préciser l’appel à GL_POINT2D si le drapeau presetColorAndGLVertex est vrai (c’est bcp mieux pour OpenGL)
+
     void segment( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2 );
-    void segmentCouleur( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2, GLfloat r, GLfloat g, GLfloat b );
 
-    void setCouleur( GLfloat r, GLfloat g, GLfloat b );
+    void texte( float x, float y, const char *texte );
 
-    void texte( float x, float y, void *font, const char *texte );
+    float getScale()
+    {
+        return m_scale;
+    }
+    void setScale( float scale )
+    {
+        m_scale = scale;
+    }
 
     double xMin( void )
     {
@@ -79,15 +96,6 @@ public:
     {
         winPixels.x = x;
         winPixels.y = y;
-    }
-
-    float getScale()
-    {
-        return m_scale;
-    }
-    void setScale( float scale )
-    {
-        m_scale = scale;
     }
 
     unsigned int xWinFunc( void )
@@ -127,9 +135,8 @@ protected:
 };
 
 // openGL functions
+void Scale(int, int, int, int);
 void Display();
 void Reshape(int, int);
-void Scale(int, int, int, int);
 
 #endif // GeomGlut_H
-
